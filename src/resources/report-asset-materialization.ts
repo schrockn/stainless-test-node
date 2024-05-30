@@ -20,11 +20,11 @@ export class ReportAssetMaterialization extends APIResource {
 export interface ReportAssetMaterializationCreateParams {
   asset_key: string;
 
-  partition: string;
-
   data_version?: string;
 
   description?: string;
+
+  partition?: string;
 }
 
 export namespace ReportAssetMaterialization {
