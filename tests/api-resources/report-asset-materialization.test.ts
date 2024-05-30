@@ -9,10 +9,7 @@ const dagsterPlusRest = new DagsterPlusRest({
 
 describe('resource reportAssetMaterialization', () => {
   test('create: only required params', async () => {
-    const responsePromise = dagsterPlusRest.reportAssetMaterialization.create({
-      asset_key: 'string',
-      partition: 'string',
-    });
+    const responsePromise = dagsterPlusRest.reportAssetMaterialization.create({ asset_key: 'string' });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -25,9 +22,9 @@ describe('resource reportAssetMaterialization', () => {
   test('create: required and optional params', async () => {
     const response = await dagsterPlusRest.reportAssetMaterialization.create({
       asset_key: 'string',
-      partition: 'string',
       data_version: 'string',
       description: 'string',
+      partition: 'string',
     });
   });
 });

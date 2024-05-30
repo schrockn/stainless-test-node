@@ -28,10 +28,7 @@ import DagsterPlusRest from 'dagster-plus-rest';
 const dagsterPlusRest = new DagsterPlusRest();
 
 async function main() {
-  const response = await dagsterPlusRest.reportAssetMaterialization.create({
-    asset_key: 'string',
-    partition: 'string',
-  });
+  const response = await dagsterPlusRest.reportAssetMaterialization.create({ asset_key: 'string' });
 }
 
 main();
@@ -48,10 +45,7 @@ import DagsterPlusRest from 'dagster-plus-rest';
 const dagsterPlusRest = new DagsterPlusRest();
 
 async function main() {
-  const params: DagsterPlusRest.ReportAssetMaterializationCreateParams = {
-    asset_key: 'string',
-    partition: 'string',
-  };
+  const params: DagsterPlusRest.ReportAssetMaterializationCreateParams = { asset_key: 'string' };
   const response = await dagsterPlusRest.reportAssetMaterialization.create(params);
 }
 
@@ -70,7 +64,7 @@ a subclass of `APIError` will be thrown:
 ```ts
 async function main() {
   const response = await dagsterPlusRest.reportAssetMaterialization
-    .create({ asset_key: 'string', partition: 'string' })
+    .create({ asset_key: 'string' })
     .catch(async (err) => {
       if (err instanceof DagsterPlusRest.APIError) {
         console.log(err.status); // 400
@@ -114,7 +108,7 @@ const dagsterPlusRest = new DagsterPlusRest({
 });
 
 // Or, configure per-request:
-await dagsterPlusRest.reportAssetMaterialization.create({ asset_key: 'string', partition: 'string' }, {
+await dagsterPlusRest.reportAssetMaterialization.create({ asset_key: 'string' }, {
   maxRetries: 5,
 });
 ```
@@ -131,7 +125,7 @@ const dagsterPlusRest = new DagsterPlusRest({
 });
 
 // Override per-request:
-await dagsterPlusRest.reportAssetMaterialization.create({ asset_key: 'string', partition: 'string' }, {
+await dagsterPlusRest.reportAssetMaterialization.create({ asset_key: 'string' }, {
   timeout: 5 * 1000,
 });
 ```
@@ -153,13 +147,13 @@ You can also use the `.withResponse()` method to get the raw `Response` along wi
 const dagsterPlusRest = new DagsterPlusRest();
 
 const response = await dagsterPlusRest.reportAssetMaterialization
-  .create({ asset_key: 'string', partition: 'string' })
+  .create({ asset_key: 'string' })
   .asResponse();
 console.log(response.headers.get('X-My-Header'));
 console.log(response.statusText); // access the underlying Response object
 
 const { data: response, response: raw } = await dagsterPlusRest.reportAssetMaterialization
-  .create({ asset_key: 'string', partition: 'string' })
+  .create({ asset_key: 'string' })
   .withResponse();
 console.log(raw.headers.get('X-My-Header'));
 console.log(response);
@@ -267,7 +261,7 @@ const dagsterPlusRest = new DagsterPlusRest({
 
 // Override per-request:
 await dagsterPlusRest.reportAssetMaterialization.create(
-  { asset_key: 'string', partition: 'string' },
+  { asset_key: 'string' },
   {
     httpAgent: new http.Agent({ keepAlive: false }),
   },
