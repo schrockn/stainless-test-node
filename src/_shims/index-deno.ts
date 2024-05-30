@@ -79,7 +79,7 @@ export function getDefaultAgent(url: string) {
 }
 export function fileFromPath() {
   throw new Error(
-    'The `fileFromPath` function is only supported in Node. See the README for more details: https://www.github.com/undefined/stainless-test#file-uploads',
+    'The `fileFromPath` function is only supported in Node. See the README for more details: https://www.github.com/schrockn/stainless-test-node#file-uploads',
   );
 }
 
