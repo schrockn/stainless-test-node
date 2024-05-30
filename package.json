@@ -1,6 +1,6 @@
 {
   "name": "dagster-plus-rest",
-  "version": "0.0.1-alpha.0",
+  "version": "0.1.0-alpha.1",
   "description": "The official TypeScript library for the Dagster Plus Rest API",
   "author": "Dagster Plus Rest <dev-feedback@dagster-plus-rest.com>",
   "types": "dist/index.d.ts",
